@@ -1,0 +1,14 @@
+.editorconfig
+.eslintrc.js
+.gitignore
+.npmignore
+.prettierrc
+.vscode/
+CHANGELOG.md
+CONTRIBUTING.md
+examples/
+package-lock.json
+prettier.config.js
+tasks/
+test/
+webpack.config.js

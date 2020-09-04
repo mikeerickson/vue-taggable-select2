@@ -1,6 +1,6 @@
 {
-    "name": "vue-taggable-select2",
-    "version": "1.0.0",
+    "name": "@codedungeon/vue-taggable-select2",
+    "version": "0.1.0",
     "description": "multiple taggable select autocomplete dropdown for vue",
     "main": "dist/index",
     "unpkg": "dist/vue-taggable-select2.js",
@@ -35,9 +35,9 @@
     "author": "Mike Erickson",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/robrogers3/vue-taggable-select2/issues"
+        "url": "https://github.com/mikeerickson/vue-taggable-select2/issues"
     },
-    "homepage": "https://github.com/robrogers3/vue-taggable-select2#readme",
+    "homepage": "https://github.com/mikeerickson/vue-taggable-select2/issues#readme",
     "peerDependencies": {
         "vue": "2.x"
     },

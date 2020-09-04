@@ -16,14 +16,13 @@ This **simple**
 
 ```html
 <vue-taggable-select2
-    :taggable="true"
-	v-model="sport"
-	:options="['apple','cherry','banana','pear', 'tomato']"
+  :taggable="true"
+  v-model="sport"
+  :options="['apple','cherry','banana','pear', 'tomato']"
 ></vue-taggable-select2>
 ```
 
-<img style="width: 400px" src="https://raw.githubusercontent.com/robrogers3/vue-taggable-select2/master/vue-taggable-select2.png">
-
+<img style="width: 400px" src="https://raw.githubusercontent.com/mikeerickson/vue-taggable-select2/master/vue-taggable-select2.png">
 
 ## What It Does Not Do
 
@@ -39,11 +38,11 @@ No ajax loading.
 
 ```html
 <div id="app">
-    <lable>Choose a sport!</lable>
-    <vue-taggable-select2
-	    v-model="sport"
-	    :options="sports"
-    ></vue-taggable-select2>
+<lable>Choose a sport!</lable>
+  <vue-taggable-select2
+    v-model="sport"
+    :options="sports"
+  ></vue-taggable-select2>
 </div>
 ```
 
@@ -164,30 +163,34 @@ Then all you need to do is provide some class definitions like so:
 
 ```css
 .active {
-	background-color: pink;
+  background-color: pink;
 }
 .multi-select-wrapper {
-	display: block;
-	font-size: 16px;
+  display: block;
+  font-size: 16px;
 }
 .search-input {
-	color: black;
+  color: black;
 }
 .pill {
-	padding: .5em;
+  padding: .5em;
 }
 ```
+
 ... and so on.
 
 **Note: Bootstrap 3 Users May want to increase the size of the icons.**
 
 If so do this:
+
 ```css
+
 .icons svg {
     height: 1em;
     width: 1em;
 }
 ```
+
 ### Kitchen Sink
 
 Meh, see props below.
@@ -370,4 +373,3 @@ props: {
     }
 },
 ```
-
