@@ -1,4 +1,4 @@
-# vue-taggable-select
+# vue-taggable-select2
 
 A Vue component that makes long, unwieldy select boxes user friendly.
 
@@ -6,7 +6,7 @@ A Vue component that makes long, unwieldy select boxes user friendly.
 
 ## What it Does
 
-vue-taggable-select provides an elegant, user-friendly component to replace long, unwieldy multi select elements. Great for users. Simple for developers.
+vue-taggable-select2 provides an elegant, user-friendly component to replace long, unwieldy multi select elements. Great for users. Simple for developers.
 
 ## How simple?
 
@@ -15,14 +15,14 @@ This simple:
 This **simple**
 
 ```html
-<vue-taggable-select
+<vue-taggable-select2
     :taggable="true"
-	v-model="fruit" 
+	v-model="sport"
 	:options="['apple','cherry','banana','pear', 'tomato']"
-></vue-taggable-select>
+></vue-taggable-select2>
 ```
 
-<img style="width: 400px" src="https://raw.githubusercontent.com/robrogers3/vue-taggable-select/master/vue-taggable-select.png">
+<img style="width: 400px" src="https://raw.githubusercontent.com/robrogers3/vue-taggable-select2/master/vue-taggable-select2.png">
 
 
 ## What It Does Not Do
@@ -39,23 +39,23 @@ No ajax loading.
 
 ```html
 <div id="app">
-    <lable>Choose a fruit!</lable>
-    <vue-taggable-select
-	    v-model="fruit"
-	    :options="fruits"
-    ></vue-taggable-select>
+    <lable>Choose a sport!</lable>
+    <vue-taggable-select2
+	    v-model="sport"
+	    :options="sports"
+    ></vue-taggable-select2>
 </div>
 ```
 
 ```html
 <script src="https://unpkg.com/vue@latest"></script>
-<script src="https://unpkg.com/vue-taggable-select@latest"></script>
+<script src="https://unpkg.com/vue-taggable-select2@latest"></script>
 <script>
  new Vue({
      el:"#app",
      data: {
-         fruit: null,
-         fruits: ['peach','pear','apple','orange']
+         sport: null,
+         sports: ['baseball','football','basketball','hockey']
      }
  });
 </script>
@@ -64,7 +64,7 @@ No ajax loading.
 ### Install Via NPM
 
 ```bash
-$ npm i vue-taggable-select
+> npm i @codedungeon/vue-taggable-select2
 ```
 
 ### Register it
@@ -72,10 +72,10 @@ $ npm i vue-taggable-select
 In your component:
 
 ```javascript
-import VueTaggableSelect from "vue-taggable-select";
+import VueTaggableSelect2 from "vue-taggable-select2";
 export default {
 components: {
-     VueTaggableSelect
+     VueTaggableSelect2
   },
   //...
 }
@@ -84,26 +84,26 @@ components: {
 Globally:
 
 ```javascript
-import VueTaggableSelect from "vue-taggable-select";
-Vue.component('vue-taggable-select', VueTaggableSelect);
+import VueTaggableSelect2 from "vue-taggable-select2";
+Vue.component('vue-taggable-select2', VueTaggableSelect2);
 ```
 
 ### Use It
 
 ```html
-<vue-taggable-select
+<vue-taggable-select2
     make-it-taggable="good!"
     :taggable="true"
-    v-model="fruit"
+    v-model="sport"
     :options="['apple','banana','cherry','tomato']"
     :required="true"
-></vue-taggable-select>
+></vue-taggable-select2>
 ```
 
 ### Use It Again
 
 ```html
-<vue-taggable-select
+<vue-taggable-select2
         name="maybe"
         placeholder="pick a post"
         you-want-to-select-a-post="ok"
@@ -114,13 +114,13 @@ Vue.component('vue-taggable-select', VueTaggableSelect);
         option-key="id"
         the-post-has-a-title="make sure to show these"
         option-label="title"
-></vue-taggable-select>
+></vue-taggable-select2>
 ```
 
 ### Use It Again
 
 ```html
-<vue-taggable-select
+<vue-taggable-select2
         you-want-to-select-a-reply="yes"
         v-model="reply"
         out-of-all-these-replies="yep"
@@ -131,7 +131,7 @@ Vue.component('vue-taggable-select', VueTaggableSelect);
         initial="seed me"
         you-only-want-20-options-to-show="is 20 enough?"
         :max-results="20"
-></vue-taggable-select>
+></vue-taggable-select2>
 ```
 
 ### Dont like the Styling?
@@ -139,7 +139,7 @@ Vue.component('vue-taggable-select', VueTaggableSelect);
 You can override some of it. Like so:
 
 ```html
-<vue-taggable-select
+<vue-taggable-select2
         id="selected-reply"
         name="a_reply"
         option-label="reply"
@@ -157,7 +157,7 @@ You can override some of it. Like so:
             required: "required",
             dropdown: "dropdown"
         }'
-></vue-taggable-select>
+></vue-taggable-select2>
 ```
 
 Then all you need to do is provide some class definitions like so:
@@ -181,7 +181,7 @@ Then all you need to do is provide some class definitions like so:
 
 **Note: Bootstrap 3 Users May want to increase the size of the icons.**
 
-If so do this: 
+If so do this:
 ```css
 .icons svg {
     height: 1em;
@@ -192,7 +192,7 @@ If so do this:
 
 Meh, see props below.
 
-## Why vue-taggable-select is better
+## Why vue-taggable-select2 is better
 
 1.  It handles custom label/value props for displaying options.
 
@@ -200,7 +200,7 @@ Meh, see props below.
 
 2.  It's easier on the DOM.
 
-    Other components will load up all the options available in the select element. This can be heavy. vue-taggable-select makes an executive decision that you probably will not want to scroll more than N options before you want to narrow things down a bit. You can change this, but the default is 30.
+    Other components will load up all the options available in the select element. This can be heavy. vue-taggable-select2 makes an executive decision that you probably will not want to scroll more than N options before you want to narrow things down a bit. You can change this, but the default is 30.
 
 3.  Snappy Event Handling
 
@@ -262,21 +262,21 @@ props: {
         required: false,
         default: () => ""
     },
-    // Your list of things for the select   
+    // Your list of things for the select
     options: {
         type: Array,
         required: false,
         default: () => []
     },
-    // Tells vue-taggable-select what key to use
+    // Tells vue-taggable-select2 what key to use
     // for generating option labels
     optionLabel: {
         type: String,
         required: false,
         default: () => null
     },
-    // Tells vue-taggable-select the value
-    // you want populated in the select for the 
+    // Tells vue-taggable-select2 the value
+    // you want populated in the select for the
     // input
     optionKey: {
         type: String,
@@ -335,7 +335,7 @@ props: {
             return true;
         }
     },
-    // Tell vue-taggable-select how to display
+    // Tell vue-taggable-select2 how to display
     // selected options
     getOptionDescription: {
         type: Function,
@@ -352,7 +352,7 @@ props: {
             return option;
         }
     },
-    // Use this to tell vue-taggable-select
+    // Use this to tell vue-taggable-select2
     // the values are for doing a submit
     getOptionValue: {
         type: Function,
@@ -369,5 +369,5 @@ props: {
         }
     }
 },
-```	 
+```
 
