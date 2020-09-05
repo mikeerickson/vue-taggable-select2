@@ -7,6 +7,13 @@
     "browser": {
         "./sfc": "dist/vue-taggable-select2.vue"
     },
+    "contributors": [
+        {
+            "name": "Mike Erickson",
+            "email": "mike.erickson@codedungeon.io",
+            "url": "https://github.com/mikeerickson"
+        }
+    ],
     "scripts": {
         "prepublish": "npm run build",
         "serve": "vue-cli-service serve",
@@ -29,10 +36,11 @@
         "select",
         "multi",
         "multiple",
+        "multiselect",
+        "select",
         "element",
         "component"
     ],
-    "author": "Mike Erickson",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/mikeerickson/vue-taggable-select2/issues"
