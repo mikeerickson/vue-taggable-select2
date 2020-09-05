@@ -167,24 +167,22 @@ export default {
     },
     props: {
         value: {
+            type: [String, Array],
             required: true,
         },
         debug: {
             type: Boolean,
-            required: false,
             default: () => false,
         },
         //Make it taggable
         taggable: {
             type: Boolean,
-            required: false,
             default: () => false,
         },
         // Use classes to override the look and feel
         // Provide these 7 classes.
         classes: {
             type: Object,
-            required: false,
             default: () => {
                 return {
                     icons: "icons",
@@ -202,20 +200,17 @@ export default {
         // Good for posting forms
         name: {
             type: String,
-            required: false,
             default: () => "",
         },
         // Your list of things for the select
         options: {
             type: Array,
-            required: false,
             default: () => [],
         },
         // Tells vue-taggable-select2 what key to use
         // for generating option labels
         optionLabel: {
             type: String,
-            required: false,
             default: () => null,
         },
         // Tells vue-taggable-select2 the value
@@ -223,49 +218,41 @@ export default {
         // input
         optionKey: {
             type: String,
-            required: false,
             default: () => null,
         },
         // Give your input an html element id
         placeholder: {
             type: String,
-            required: false,
             default: () => "Search Here",
         },
         //how tall should the dropdown be?
         maxHeight: {
             type: String,
             default: () => "220px",
-            required: false,
         },
         //Give the input an id
         inputId: {
             type: String,
             default: () => "multi-select",
-            required: false,
         },
         // Seed search text with initial value
         initial: {
             type: String,
-            required: false,
             default: () => null,
         },
         // Make it required
         required: {
             type: Boolean,
-            required: false,
             default: () => false,
         },
         // Max number of results to show.
         maxResults: {
             type: Number,
-            required: false,
             default: () => 30,
         },
         //Meh
         tabindex: {
             type: String,
-            required: false,
             default: () => {
                 return ""
             },
@@ -274,14 +261,12 @@ export default {
         // via the delete key
         keyboardDelete: {
             type: Boolean,
-            required: false,
             default: () => {
                 return true
             },
         },
         forceIcons: {
             type: Boolean,
-            required: false,
             default: () => {
                 return false
             },
@@ -290,7 +275,6 @@ export default {
         // as the selected option
         getOptionDescription: {
             type: Function,
-            required: false,
             default(option) {
                 if (this.optionKey && this.optionLabel) {
                     return option[this.optionKey] + " " + option[this.optionLabel]
@@ -309,7 +293,6 @@ export default {
         // a value for doing a POST
         getOptionValue: {
             type: Function,
-            required: false,
             default(option) {
                 if (this.optionKey) {
                     return option[this.optionKey]
@@ -325,7 +308,6 @@ export default {
         // Meh, Create an option for tagging
         createOption: {
             type: Function,
-            required: false,
             default(option) {
                 if (!this.taggable) {
                     throw new Error("Tagging is not enabled")
@@ -351,14 +333,12 @@ export default {
         },
         createOptionKey: {
             type: Function,
-            required: false,
             default() {
                 return Math.max(...this.mutableOptions.map((opt) => opt[this.optionKey])) + 1
             },
         },
         findExistingOption: {
             type: Function,
-            required: false,
             default(option, givenOptions) {
                 if (this.optionValue) {
                     return givenOptions.find((opt) => opt[this.optionKey] === this.getOptionValue(option))
