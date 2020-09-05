@@ -10,3 +10,6 @@ example/
 .nyc_output/
 .vscode/
 .temp/
+todo.*
+tasks/
+node_modules/
