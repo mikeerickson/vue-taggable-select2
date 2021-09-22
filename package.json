@@ -1,7 +1,7 @@
 {
   "name": "@codedungeon/vue-taggable-select2",
-  "version": "0.1.1",
-  "build": "27",
+  "version": "0.2.0",
+  "build": "29",
   "description": "multiple taggable select autocomplete dropdown for vue",
   "main": "dist/index",
   "unpkg": "dist/vue-taggable-select2.js",

@@ -248,7 +248,7 @@ export default {
         // Max number of results to show.
         maxResults: {
             type: Number,
-            default: () => 30,
+            default: () => 256,
         },
         //Meh
         tabindex: {
